@@ -1,0 +1,16 @@
+# gcp app deploy
+runtime: go
+runtime_config:
+    operating_system: "ubuntu22"
+    runtime_version: "1.18"
+
+network: 
+name: backend
+forwarded_ports:
+    - 5000
+
+
+resources:
+    cpu: 4
+    memory_gb: 1.0
+    disk_size_gb: 10
