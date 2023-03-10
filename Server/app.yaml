@@ -5,8 +5,8 @@ runtime_config:
     runtime_version: "1.18"
 
 network: 
-name: backend
-forwarded_ports:
+   name: backend
+   forwarded_ports:
     - 5000
 
 
