@@ -1,5 +1,5 @@
 # gcp app deploy
-runtime: "go"
+runtime: go119
 runtime_config:
     operating_system: "ubuntu22"
     runtime_version: "1.18"
