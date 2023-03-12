@@ -1,0 +1,14 @@
+{
+    "trailingSlash":false,
+    "rewrites":[
+        {
+            "source":"./",
+            "destination":"./Server/server.go"
+        }
+    ]
+}
+
+
+
+
+
