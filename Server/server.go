@@ -35,19 +35,24 @@ func GetReserves(c *gin.Context) {
 	c.IndentedJSON(http.StatusOK, reserves)
 } 
 
+func hello(c *gin.Context) {
+	c.String(http.StatusOK, "Hello World")
+}
+
 func main() {
 	router := gin.Default();
 	// middlewares 
 	router.Use(cors.Default())
 
 	// routes 
+    router.GET("/",hello);
 	router.GET("/reserves", GetReserves);
 	router.POST("/reservar",APIS.CreateReserves);
 	router.GET("/reservas",APIS.GetReservas);
 	router.POST("/api/sendform",APIS.CreateMainReserves);
 	router.POST("/register",APIS.RegisterUser);
 	router.POST("/login",APIS.LoginPost);
-	router.Run("localhost:5000");
+	router.Run("localhost:8080");
 
 	//fmt.println("Server Running port 5000");
 	
