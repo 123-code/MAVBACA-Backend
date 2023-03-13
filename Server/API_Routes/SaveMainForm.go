@@ -36,7 +36,7 @@ func SaveMainForm(c *gin.Context) {
 		Comments: reqbody.Comments,
 	}
 	DB.DBconn.Create(&MainpageForm)
-//os.Getenv("SENDGRID_API_KEY")
+//os.Getenv("SENDGRID_API_KEY") 
 	// Send email
 	from := mail.NewEmail("Example User", "jose.naranjo.martinez@udla.edu.ec")
 	subject := "New reservation"

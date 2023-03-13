@@ -53,6 +53,7 @@ func main() {
 	router.POST("/api/sendform",APIS.CreateMainReserves);
 	router.POST("/register",APIS.RegisterUser);
 	router.POST("/login",APIS.LoginPost);
+	router.POST("api/mainform",APIS.SaveMainForm);
 port := os.Getenv("PORT")
 	if(port == ""){
 port = "8080"
