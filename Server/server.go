@@ -8,6 +8,7 @@ import (
 	"github.com/gin-contrib/cors"
 	//"errors"
 	//"fmt"
+	"os"
 )
 
 func init(){
@@ -52,7 +53,12 @@ func main() {
 	router.POST("/api/sendform",APIS.CreateMainReserves);
 	router.POST("/register",APIS.RegisterUser);
 	router.POST("/login",APIS.LoginPost);
-	router.Run("localhost:8080");
+port := os.Getenv("PORT")
+	if(port == ""){
+port = "8080"
+	}
+	router.Run("0.0.0.0:"+port);
+
 
 	//fmt.println("Server Running port 5000");
 	
